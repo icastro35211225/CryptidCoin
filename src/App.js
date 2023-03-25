@@ -1,14 +1,14 @@
 import './App.css';
 import Navbar from './components/navbar'
 import PageBody from './components/dummy';
-import Board from './components/leaderboard';
 import './components/board.css'
+import Leaderboard from './components/leaderBoard';
 function App() {
     return (
         <div className="App">
-            <Navbar/>
-            <PageBody/>
-            <Board/>
+            <Navbar />
+            <PageBody />
+            <Leaderboard />
         </div>
     );
 }
