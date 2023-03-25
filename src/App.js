@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar'
+import PageBody from './components/dummy';
 
 function App() {
     return (
@@ -20,6 +21,8 @@ function App() {
                 </a>
             </header>
             <Navbar/>
+            <PageBody/>
+
         </div>
     );
 }
