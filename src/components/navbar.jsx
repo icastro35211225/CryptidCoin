@@ -1,12 +1,13 @@
 import React from 'react';
+import { Outlet, Link } from "react-router-dom";
 
 export default function Navbar() {
 
     return (
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact Us</li>
+            <li><Link to="/">Home </Link></li>
+            <li><Link to="/signup">Sign up </Link></li>
+            <li><Link to="/">Home </Link></li>
         </ul>
     )
 }
