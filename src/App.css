@@ -38,26 +38,43 @@
   }
 }
 
-li {
-  float: left;
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.logo {
+  font-size: 30px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
 }
 
-li a:hover {
-  background-color: #111;
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+
+.icon,
+.link_text {
+  font-size: 20px;
 }
