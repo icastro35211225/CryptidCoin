@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar'
+import UnityApp from './Unity';
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 </a>
             </header>
             <Navbar/>
+            <UnityApp></UnityApp>
         </div>
     );
 }
