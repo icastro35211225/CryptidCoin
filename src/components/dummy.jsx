@@ -1,14 +1,54 @@
-import React from "react";
+import React , {useState, useEffect} from "react";
 //import png from './png-transparent-chupacabra-drawing-monster-cryptozoology-monster-mammal-fictional-character-painting.png';
 //console.log(png);
 export default function PageBody(){
-    
-    return (
+    const [photo, setPhoto] = useState([]);
+    const getAllPictures = (pics) => {
+        pics.then((data) =>{
+            return data.forEach((picture) => {
+                setPhoto((photo) => [...photo, picture.Key]);
+            });
+        });
+    }
+    useEffect(() => {
+        const pictures = listObjects();
+        getAllPictures(pictures); 
+    }, []);
+    const [description, setDesc] = useState({
+        desc: "",
+    });
+    return(
         <>
-        <img src = "src/assets/images/png-transparent-chupacabra-drawing-monster-cryptozoology-monster-mammal-fictional-character-painting.png alt" alt= "chp"/>
-        <p> chupacabra, in Latin American popular legend, a monstrous creature that attacks animals and consumes their blood. 
-            The name is derived from the Spanish words chupar (“to suck”) and cabra (“goat”) and can be translated as “goat-sucker.”
-            As a fearsome but probably nonexistent creature, the chupacabra has been characterized as the southern equivalent of the Sasquatch.  </p>
+        <div className = "description Container">
+            <form>
+                <div> <h3>Description of Cyripted</h3> </div>
+                <br></br>
+                <div>
+                <input 
+                type = "text" 
+                name = "Description" 
+                placeHolder = "Description" 
+                value = {description.desc}/>
+                </div>
+
+            </form>
+        </div>
+        <div className="Image container">
+            <form>
+                <div><h3>Image</h3></div>
+                <br></br>
+                <div>
+                    <input 
+                    type = "image"
+                    alt = "img"
+                    name = "image"
+                    placeHolder = "image"
+                    value= {photo}
+                    />
+                </div>
+            </form>
+        </div>
+        
         </>
-    )
+    );
 }
