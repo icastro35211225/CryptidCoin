@@ -57,7 +57,7 @@
 
 .link {
   display: flex;
-  color: #fff;
+  color: blue;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
