@@ -7,21 +7,18 @@ import SignUp from './components/signup';
 import Login from './components/login';
 
 
-export default function App() {
+const App = () => {
     return (
-
-        <div className="App">
-            <BrowserRouter>
-                <Navbar />
+        <BrowserRouter>
+            <Navbar>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path='/signup' element={<SignUp />} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
-            </BrowserRouter>
-        </div>
+            </Navbar>
+        </BrowserRouter>
     );
 }
 
-
-
+export default App;

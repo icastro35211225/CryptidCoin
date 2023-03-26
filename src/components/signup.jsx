@@ -21,7 +21,7 @@ export default function SignUp() {
     }
 
     return (
-        <>
+        <div>
             <h1>Sign Up</h1>
             <form>
                 <input id="name" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"></input><br />
@@ -31,6 +31,6 @@ export default function SignUp() {
                     signup();
                 }} >Sigup</button>
             </form>
-        </>
+        </div>
     )
 }
