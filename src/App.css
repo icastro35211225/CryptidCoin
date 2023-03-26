@@ -1,7 +1,36 @@
+.footer {
+  background-color: #FFBE79;
+}
+
+.logo {
+  display: flex;
+  justify-content: right;
+  width: 60px;
+  height: 60px;
+}
+
+.card {
+  border-radius: 30px;
+  height: 500px;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .canvas {
-  background-color: rgb(45, 3, 12);
+  background-color: #FFBE79;
   width: 100%;
   height: 100%;
+}
+
+.welcome {
+  max-height: 10px;
 }
 
 * {
@@ -20,9 +49,9 @@ main {
 }
 
 .sidebar {
-  background: #000;
-  color: #ffffff;
-  height: 100vh;
+  background: #374151;
+  color: #FFBE79;
+  height: 118vh;
   width: 200px;
   transition: all 0.5s;
 }
@@ -41,21 +70,21 @@ main {
 
 .link {
   display: flex;
-  color: #fff;
+  color: #FFBE79;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
 }
 
 .link:hover {
-  background: lightskyblue;
-  color: #000;
+  background: #FFBE79;
+  color: #374151;
   transition: all 0.5s;
 }
 
 .active {
-  background: lightskyblue;
-  color: #000;
+  background: #FFBE79;
+  color: #374151;
 }
 
 .icon,

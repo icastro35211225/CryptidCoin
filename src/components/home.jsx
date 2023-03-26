@@ -2,7 +2,6 @@ import React, { Suspense, useContext, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from '@react-three/drei';
 import * as Three from 'three';
-import { UserContext } from "../context/userContext";
 import Chest from './Chest';
 
 export default function Home() {
