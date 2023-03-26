@@ -25,6 +25,10 @@ export default function Navbar() {
         {
             path: '/login',
             name: 'Log In'
+        },
+        {
+            path: '/AccountHome',
+            name: 'Account'
         }
     ]
 
