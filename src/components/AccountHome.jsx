@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Cards from './allCryp'
+import { UseUser } from '../context/userContext';
 
 function AccountPage() {
     const [userName, setUserName] = useState('');
-    const [imageSrc, setImageSrc] = useState('');
+    //const [imageSrc, setImageSrc] = useState('');
   //const [email, setEmail] = useState('');
-  useEffect(() => {
-      axios.get('/cards')
-      .then(response => {
-          const imagePath = response.data.imagePath;
-          const url = '/images/${imagePath}';
-          setImageSrc(url);
-      })
-      .catch(error => {
-          console.log(error);
-      });
-  }, [userName]);
 
+    
   useEffect(() => {
-    axios.get('/login')
+    axios.get('/context/userContext')
       .then(response => {
-        setUserName(response.data.userName);
+        UseUser(response.data.userName);
         
       })
       .catch(error => {
@@ -36,7 +28,7 @@ function AccountPage() {
         <div>
         <h2>Here are your cards: </h2>
         <div className = "cardContainer">
-        <img src = {imageSrc} alt = "Card Collection" width="200" height ="200"/>
+        
         </div>
         </div>
     </>
