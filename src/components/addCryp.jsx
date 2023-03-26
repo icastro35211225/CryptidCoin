@@ -23,7 +23,7 @@ export default function AddCryp() {
     const [crypImg, setImg] = useState();
     const [imgUrl, setUrl] = useState();
     const [progresspercent, setProgresspercent] = useState(0);
-    const path = 'http://35.184.229.236:3001';
+    const path = 'https://35.184.229.236:3001';
 
     function fireStorage(event) {
         const file = event.target.files[0];
