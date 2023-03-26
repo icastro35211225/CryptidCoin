@@ -1,10 +1,6 @@
 import './App.css';
 import Navbar from './components/navbar'
-
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from '@react-three/drei';
-import Graphic from './components/Graphics';
+import React from "react";
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './components/home';
 import SignUp from './components/signup';
@@ -15,7 +11,6 @@ export default function App() {
     return (
 
         <div className="App">
-
             <BrowserRouter>
                 <Navbar />
                 <Routes>
