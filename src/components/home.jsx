@@ -26,7 +26,7 @@ export default function Home() {
     }, [])
 
     const [currentCard, setCurrCard] = useState([]);
-    const path = 'http://35.184.229.236:3001';
+    const path = 'https://35.184.229.236:3001';
 
     function setOtherCards() {
         console.log(cards);
