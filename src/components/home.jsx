@@ -1,10 +1,12 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from '@react-three/drei';
 import Graphic from './Graphics';
+import { UserContext } from "../context/userContext";
 
 export default function Home() {
-    //style={{ width: window.innerWidth, height: window.innerHeight }}
+    const [user, setUser] = useContext(UserContext);
+    console.log(user);
     return (
         <div className="canvas">
             <Suspense fallback={null}>

@@ -21,11 +21,13 @@ export default function SignUp() {
     }
 
     return (
-        <div>
-            <h1>Sign Up</h1>
+        <div className="login">
             <form>
-                <input id="name" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"></input><br />
-                <input id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input><br />
+                <h1>Sign Up</h1><br />
+                <h2>UserName</h2><br />
+                <input id="name" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"></input><br /><br />
+                <h2>Password</h2><br />
+                <input id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input><br /><br /> 
                 <button type="submit" onClick={(e) => {
                     e.preventDefault();
                     signup();
