@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from './components/navbar'
 import React from "react";
@@ -13,6 +14,7 @@ const App = () => {
     const user = "todd";
     return (
         <BrowserRouter>
+                <div className='hotBar'>
             <Navbar>
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -22,6 +24,7 @@ const App = () => {
                     <Route path='/getCryps' element={<AllCryps />} />
                 </Routes>
             </Navbar>
+                </div>
             <Footer />
         </BrowserRouter>
     );
