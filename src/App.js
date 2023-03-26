@@ -6,10 +6,22 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './components/home';
 import SignUp from './components/signup';
 import Login from './components/login';
+import { UserProvider } from './context/userContext';
 
-
-export default function App() {
+const App = () => {
+    const user = "todd";
     return (
+        <BrowserRouter>
+            <UserProvider>
+                <Navbar>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path='/signup' element={<SignUp />} />
+                        <Route path='/login' element={<Login />} />
+                    </Routes>
+                </Navbar>
+            </UserProvider>
+        </BrowserRouter>
 
         <div className="App">
             <BrowserRouter>
@@ -24,3 +36,4 @@ export default function App() {
     );
 }
 
+export default App;
