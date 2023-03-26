@@ -6,5 +6,16 @@
       "**/.*",
       "**/node_modules/**"
     ]
-  }
+  },
+    "headers": [
+    {
+      "source": "**/*.gz",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    }
+  ]
 }
