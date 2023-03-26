@@ -39,6 +39,10 @@
 }
 
 
+.canvas {
+  background-color: crimson;
+
+
 .top_section {
   display: flex;
   align-items: center;
@@ -77,4 +81,4 @@
 .icon,
 .link_text {
   font-size: 20px;
-}
+  }

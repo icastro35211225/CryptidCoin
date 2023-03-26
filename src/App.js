@@ -1,12 +1,19 @@
 import './App.css';
 import Navbar from './components/navbar'
+
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from '@react-three/drei';
+import Graphic from './components/Graphics';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './components/home';
 import SignUp from './components/signup';
 import Login from './components/login';
 
-function App() {
+
+export default function App() {
     return (
+
         <div className="App">
 
             <BrowserRouter>
@@ -21,4 +28,5 @@ function App() {
     );
 }
 
-export default App;
+
+
