@@ -2,12 +2,10 @@ import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from '@react-three/drei';
 import Graphic from './Graphics';
-import { UserContext } from "../context/userContext";
 
 export default function Home() {
     return (
         <div className="canvas">
-
             <Suspense fallback={null}>
                 <Canvas >
                     <OrbitControls enableZoom={true} />

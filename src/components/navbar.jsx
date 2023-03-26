@@ -31,7 +31,13 @@ export default function Navbar({ children }) {
         },
         {
             path: '/addCryp',
-            name: 'Add Cryp'
+            name: 'Add Cryp',
+            admin: true
+        },
+        {
+            path: '/getCryps',
+            name: 'All Cryps',
+            admin: true
         }
     ]
 
@@ -53,7 +59,7 @@ export default function Navbar({ children }) {
 
     return (
         <div className="container">
-            <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+            <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar" >
                 <div className="top_section">
                     <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
                         <FaBars onClick={toggle} />
@@ -63,8 +69,8 @@ export default function Navbar({ children }) {
                     menuItem.map((item, index) => {
                         if (user && item.name === 'Sign Up' || user && item.name === 'Log In') {
                             return "";
-                        } if (item.name === 'Add Cryp') {
-                            if (user.admin === true) {
+                        } if (item.admin === true) {
+                            if (user && user.admin === true) {
                                 return (<Link to={item.path} key={index} className="link" activeclassName="active">
                                     < div style={{ display: isOpen ? "block" : "none" }
                                     } className="link_text" > {item.name}</div>
@@ -85,7 +91,7 @@ export default function Navbar({ children }) {
                 }
             </div >
             <div>
-                {user ? <div className="welcome"><h1>Welcome {user.username}</h1></div> : <div className="welcome"><h1>Welcome, Please Log In</h1></div>}
+                {/* {user ? <div className="welcome"><h1>Welcome {user.username}</h1></div> : <div className="welcome"><h1>Welcome, Please Log In</h1></div>} */}
 
             </div>
             <main>

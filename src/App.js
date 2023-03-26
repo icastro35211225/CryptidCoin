@@ -5,7 +5,9 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './components/home';
 import SignUp from './components/signup';
 import Login from './components/login';
-import { UserProvider } from './context/userContext';
+import AddCryp from './components/addCryp';
+import AllCryps from './components/allCryps';
+import Footer from './components/footer';
 
 const App = () => {
     const user = "todd";
@@ -16,8 +18,11 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path='/signup' element={<SignUp />} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/addCryp' element={<AddCryp />} />
+                    <Route path='/getCryps' element={<AllCryps />} />
                 </Routes>
             </Navbar>
+            <Footer />
         </BrowserRouter>
     );
 }
