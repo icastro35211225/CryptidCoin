@@ -13,6 +13,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <UserProvider>
+                <div className='hotBar'>
                 <Navbar>
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -20,6 +21,7 @@ const App = () => {
                         <Route path='/login' element={<Login />} />
                     </Routes>
                 </Navbar>
+                </div>
             </UserProvider>
         </BrowserRouter>
     );
