@@ -11,15 +11,13 @@ const App = () => {
     const user = "todd";
     return (
         <BrowserRouter>
-            <UserProvider>
-                <Navbar>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path='/signup' element={<SignUp />} />
-                        <Route path='/login' element={<Login />} />
-                    </Routes>
-                </Navbar>
-            </UserProvider>
+            <Navbar>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path='/signup' element={<SignUp />} />
+                    <Route path='/login' element={<Login />} />
+                </Routes>
+            </Navbar>
         </BrowserRouter>
     );
 }

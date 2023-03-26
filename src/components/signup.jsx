@@ -7,11 +7,12 @@ export default function SignUp() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const path = 'http://35.184.229.236:3001';
 
     function signup() {
         if (username && password) {
-            axios.post('http://localhost:3001/signup', {
-                username: username + "",
+            axios.post(`${path}/signup`, {
+                username: username,
                 password: password
             }).then((response) => {
                 console.log(response);
@@ -27,7 +28,7 @@ export default function SignUp() {
                 <h2>UserName</h2><br />
                 <input id="name" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username"></input><br /><br />
                 <h2>Password</h2><br />
-                <input id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input><br /><br /> 
+                <input id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"></input><br /><br />
                 <button type="submit" onClick={(e) => {
                     e.preventDefault();
                     signup();

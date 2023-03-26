@@ -2,25 +2,27 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import { UserContext } from "../context/userContext";
 import './login.css'
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useContext(UserContext);
+    const navigate = useNavigate();
+    const path = 'http://35.184.229.236:3001';
 
 
-    function login() {
-        axios.get('http://localhost:3001/login', {
-            username: userName,
-            password: password
-        }).then((res) => {
-
-            if (res.status === 200) {
-                // 
-                setUser({ userName: res.user, })
-            }
-            console.log(res);
-        })
+    async function login() {
+        if (userName && password) {
+            await axios.post(`${path}/login`, {
+                username: userName,
+                password: password
+            }).then((res) => {
+                console.log(res.data);
+                localStorage.setItem('userInfo', JSON.stringify(res.data[0]))
+                navigate('/');
+                window.location.reload(false);
+            })
+        }
     }
     return (
         <div className="login">
@@ -49,8 +51,6 @@ const Login = () => {
                     onClick={(e) => {
                         e.preventDefault();
                         login();
-                        console.log(userName);
-                        console.log(password);
                     }}>Log In</button>
             </form>
         </div>
