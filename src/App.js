@@ -46,8 +46,8 @@ const App = () => {
                     </Routes>
                     {/* </CardContext.Provider> */}
                 </Navbar>
+                <Footer />
             </div>
-            <Footer />
         </BrowserRouter>
     );
 }
