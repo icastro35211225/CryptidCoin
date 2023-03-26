@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function AllCryps() {
     const [cryps, setCryps] = useState();
-    const path = 'https://35.184.229.236:3001';
+    const path = 'http://35.184.229.236:3001';
 
 
     async function getCards() {

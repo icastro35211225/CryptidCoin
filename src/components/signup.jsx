@@ -7,7 +7,7 @@ export default function SignUp() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const path = 'https://35.184.229.236:3001';
+    const path = 'http://35.184.229.236:3001';
 
     function signup() {
         if (username && password) {

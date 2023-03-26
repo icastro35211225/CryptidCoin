@@ -13,9 +13,11 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/chest.gltf')
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.Chest} rotation={[-Math.PI / 2, 0, 0]}  />
-    </group>
+    <>
+      <group {...props} dispose={null}>
+        <mesh geometry={nodes.Object_2.geometry} material={materials.Chest} rotation={[-Math.PI / 2, 0, 0]} />
+      </group>
+    </>
   )
 }
 

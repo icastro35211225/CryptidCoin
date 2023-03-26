@@ -2,6 +2,11 @@
   background-color: #FFBE79;
 }
 
+#small {
+  width: 200px;
+  height: 300px;
+}
+
 .logo {
   display: flex;
   justify-content: right;
@@ -92,14 +97,14 @@ main {
   font-size: 20px;
 }
 
-.canvas{
+.canvas {
   background-image: url(./assets/images/pixel-art-water-grass-flowers-trees-hd-wallpaper-preview.jpg);
   background-size: 1450px;
   /* width: 1450px;
   height: 800px; */
-  
+
 }
 
-.hotBar{
+.hotBar {
   font-family: Arial;
 }

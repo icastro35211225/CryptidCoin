@@ -8,7 +8,7 @@ const Login = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const path = 'https://35.184.229.236:3001';
+    const path = 'http://35.184.229.236:3001';
 
 
     async function login() {
@@ -26,7 +26,7 @@ const Login = () => {
     }
     return (
         <div className="login">
-            
+
             <form>
                 <h1>Log In</h1><br />
                 <h2>Username</h2><br />
@@ -55,7 +55,7 @@ const Login = () => {
             </form>
         </div>
 
-        
+
     );
 
 }
