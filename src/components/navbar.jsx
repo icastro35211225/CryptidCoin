@@ -38,6 +38,10 @@ export default function Navbar({ children }) {
             path: '/getCryps',
             name: 'All Cryps',
             admin: true
+        },
+        {
+            path: '/AccountHome',
+            name: 'Account'
         }
     ]
 
