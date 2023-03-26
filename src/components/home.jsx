@@ -26,7 +26,7 @@ export default function Home() {
     }, [])
 
     const [currentCard, setCurrCard] = useState([]);
-    const path = 'https://35.184.229.236:3001';
+    const path = 'https://cryptidcoin-api-production.up.railway.app';
 
     function setOtherCards() {
         console.log(cards);

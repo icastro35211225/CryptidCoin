@@ -8,7 +8,7 @@ const Login = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const path = 'https://35.184.229.236:3001';
+    const path = 'https://cryptidcoin-api-production.up.railway.app';
 
 
     async function login() {
