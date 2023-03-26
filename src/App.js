@@ -1,21 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar'
+
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from '@react-three/drei';
 import Graphic from './components/Graphics';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Home from './components/home';
+import SignUp from './components/signup';
+import Login from './components/login';
+
 
 export default function App() {
     return (
-        <div className="canvas">
-            <Canvas style={{ width: window.innerWidth, height: window.innerHeight }}>
-                <OrbitControls enableZoom={true} />
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[-2, 5, 2]} intensity={1} />
-                <Suspense fallback={null} />
-                <Graphic />
-            </Canvas>
+
+        <div className="App">
+
+            <BrowserRouter>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path='/signup' element={<SignUp />} />
+                    <Route path='/login' element={<Login />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
