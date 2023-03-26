@@ -21,6 +21,10 @@ export default function Navbar() {
         {
             path: '/signup',
             name: 'Sign Up'
+        },
+        {
+            path: '/login',
+            name: 'Log In'
         }
     ]
 
