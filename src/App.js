@@ -22,17 +22,6 @@ const App = () => {
                 </Navbar>
             </UserProvider>
         </BrowserRouter>
-
-        <div className="App">
-            <BrowserRouter>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path='/signup' element={<SignUp />} />
-                    <Route path='/login' element={<Login />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
     );
 }
 
